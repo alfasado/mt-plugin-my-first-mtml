@@ -1,0 +1,17 @@
+id  : MyFirstMTML
+name: MyFirstMTML
+key : myfirstmtml
+version: 0.1
+author_name: Alfasado Inc.
+author_link: http://alfasado.net/
+description: 'My First MTML.'
+tags:
+    block:
+        SampleBlock: $myfirstmtml::MyFirstMTML::Tags::_hdlr_sample_block
+        IfSampleBlockCond?: $myfirstmtml::MyFirstMTML::Tags::_hdlr_if_sample_block_cond
+    function:
+        SampleFunction1: $myfirstmtml::MyFirstMTML::Tags::_hdlr_sample_function_1
+        SampleFunction2: $myfirstmtml::MyFirstMTML::Tags::_hdlr_sample_function_2
+    modifier:
+        SampleModifier: $myfirstmtml::MyFirstMTML::Tags::_filter_sample_modifier
+
