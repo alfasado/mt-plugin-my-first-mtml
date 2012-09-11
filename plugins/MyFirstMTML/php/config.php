@@ -69,8 +69,17 @@ class MyFirstMTML extends MTPlugin {
         return 'Hello MTML!';
     }
     
-    function _hdlr_sample_function_2 ( $text, &$ctx ) {
-        return $ctx->stash( 'foo' );
+    function _hdlr_sample_function_2 ( $args, &$ctx ) {
+        $prefix = $args[ 'prefix' ];
+        $suffix = $args[ 'suffix' ];
+        $foo = $ctx->stash( 'foo' );
+        if ( $prefix ) {
+            $foo = $prefix . $foo;
+        }
+        if ( $suffix ) {
+            $foo .= $suffix;
+        }
+        return $foo;
     }
 
     function _filter_sample_modifier ( $text, $arg ) {
